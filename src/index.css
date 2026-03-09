@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-luxury-white text-luxury-dark;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-navy-900 text-white rounded-md font-semibold transition-all duration-300 hover:bg-black hover:shadow-luxury active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-navy-900 text-navy-900 rounded-md font-semibold transition-all duration-300 hover:bg-navy-900 hover:text-white;
+  }
+
+  .card-luxury {
+    @apply bg-luxury-white border border-gray-200 rounded-lg shadow-luxury-sm hover:shadow-luxury transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-navy-900 mb-12 text-center;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #001f3f 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
