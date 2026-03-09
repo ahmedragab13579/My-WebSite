@@ -20,11 +20,11 @@ export default function About() {
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Through intensive training at ITI (Information Technology
-              Institute), I've mastered Full Stack .NET Development,
-              specializing in backend architecture, database design, and
-              microservices patterns using Redis and RabbitMQ. I'm also a
-              dedicated member of IEEE, contributing to projects that emphasize
-              teamwork, quality assurance, and innovative problem-solving.
+              Institute), I've mastered Backend .NET Development, specializing
+              in backend architecture, database design, and microservices
+              patterns using Redis and RabbitMQ. I'm also a dedicated member of
+              IEEE, contributing to projects that emphasize teamwork, quality
+              assurance, and innovative problem-solving.
             </p>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -79,7 +79,7 @@ export default function About() {
                 Sohag University, Egypt
               </p>
               <p className="text-gray-700 font-semibold mb-1">
-                Full Stack .NET Development
+                Backend .NET Development
               </p>
               <p className="text-sm text-gray-600">ITI Training Institute</p>
             </div>

@@ -3,10 +3,13 @@ import { Download, ExternalLink } from "lucide-react";
 
 export default function Hero() {
   const handleDownloadCV = () => {
-    // In a real scenario, this would link to a CV file
-    const cvUrl =
-      "https://drive.google.com/file/d/YOUR_CV_LINK_HERE/view?usp=sharing";
-    window.open(cvUrl, "_blank");
+    const cvUrl = "/CV/AhmedCv (6).pdf";
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "AhmedCv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -22,7 +25,7 @@ export default function Hero() {
               Ahmed Ragab.
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-              Full Stack .NET Developer | Navigation Science Student |
+              Backend .NET Developer | Navigation Science Student |
               Cybersecurity Enthusiast
             </h2>
             <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
@@ -78,13 +81,15 @@ export default function Hero() {
 
               {/* Profile Card */}
               <div className="relative z-10 bg-white bg-opacity-5 backdrop-blur-xl border border-white border-opacity-20 rounded-2xl p-8 w-full max-w-sm">
-                <div className="w-full aspect-square bg-gradient-to-br from-navy-900 to-black rounded-lg mb-6 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-white opacity-30">
-                    AR
-                  </div>
+                <div className="w-full aspect-square bg-gradient-to-br from-navy-900 to-black rounded-full mb-6 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/Images/Avatar/4.jpg"
+                    alt="Ahmed Ragab"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-white font-semibold text-lg">Ahmed Ragab</p>
-                <p className="text-gray-300 text-sm">Full Stack Developer</p>
+                <p className="text-gray-300 text-sm">Backend Developer</p>
                 <div className="mt-6 space-y-2">
                   <p className="text-xs text-gray-400">📍 Sohag, Egypt</p>
                   <p className="text-xs text-gray-400">
