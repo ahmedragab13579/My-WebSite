@@ -37,7 +37,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         <h2 className="section-title">Technical Skills</h2>
 
-        <div className="grid md:grid-cols-3 gap-8 animate-slide-up">
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-up max-w-4xl mx-auto">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
