@@ -40,7 +40,7 @@ export default function About() {
               <div className="bg-white p-6 rounded-lg shadow-luxury-sm border border-gray-200 hover:shadow-luxury transition-all duration-300">
                 <Code className="text-navy-900 mb-3" size={32} />
                 <p className="font-semibold text-navy-900 mb-1">Development</p>
-                <p className="text-sm text-gray-600">.NET & React</p>
+                <p className="text-sm text-gray-600">.NET</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-luxury-sm border border-gray-200 hover:shadow-luxury transition-all duration-300">
                 <Shield className="text-navy-900 mb-3" size={32} />
