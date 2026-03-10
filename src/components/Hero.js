@@ -92,9 +92,6 @@ export default function Hero() {
                     }}
                     className="w-full h-full object-cover"
                   />
-                  <span className="absolute inset-0 flex items-center justify-center text-4xl font-bold">
-                    AR
-                  </span>
                 </div>
                 <p className="text-white font-semibold text-lg">Ahmed Ragab</p>
                 <p className="text-gray-300 text-sm">Backend Developer</p>
