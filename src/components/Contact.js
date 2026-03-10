@@ -190,7 +190,7 @@ export default function Contact() {
                 <p className="text-xs text-gray-400 text-center">
                   Prefer a direct email? Reach me at{" "}
                   <a
-                    href="mailto:ahmed.ragab@example.com"
+                    href="mailto:ahmedharidy2019@gmail.com"
                     className="underline hover:text-white"
                   >
                     ahmed.ragab@example.com
