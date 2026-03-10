@@ -18,19 +18,6 @@ export default function Skills() {
       ],
     },
     {
-      name: "Frontend Development",
-      icon: <Code className="text-white" size={32} />,
-      bgColor: "bg-gradient-to-br from-navy-800 to-navy-900",
-      skills: [
-        { name: "React.js", level: 85 },
-        { name: "JavaScript", level: 84 },
-        { name: "Tailwind CSS", level: 88 },
-        { name: "HTML5", level: 90 },
-        { name: "CSS3", level: 87 },
-        { name: "Responsive Design", level: 89 },
-      ],
-    },
-    {
       name: "Security & DevOps",
       icon: <Lock className="text-white" size={32} />,
       bgColor: "bg-gradient-to-br from-black to-navy-900",
