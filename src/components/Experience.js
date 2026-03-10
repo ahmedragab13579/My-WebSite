@@ -45,7 +45,7 @@ export default function Experience() {
         "Entity Framework",
       ],
       github: "https://github.com/ahmedragab13579/E-Commerce",
-      year: "2024",
+      year: "2025",
     },
     {
       title: "HR Management System",
@@ -82,7 +82,7 @@ export default function Experience() {
         "SOLID Principles",
       ],
       github: "https://github.com/IEEE-Beni-Suef/hr-system",
-      year: "2024",
+      year: "2026",
     },
   ];
 
