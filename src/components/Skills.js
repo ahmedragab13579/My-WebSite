@@ -81,7 +81,7 @@ export default function Skills() {
             { label: "Languages Known", value: "2" },
             { label: "Years of Experience", value: "2+" },
             { label: "Projects Delivered", value: "5+" },
-            { label: "Certifications", value: "3+" },
+            { label: "Certifications", value: "37+" },
           ].map((stat, idx) => (
             <div
               key={idx}
