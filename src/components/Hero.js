@@ -25,8 +25,7 @@ export default function Hero() {
               Ahmed Ragab.
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-              Backend .NET Developer | Navigation Science Student |
-              Cybersecurity Enthusiast
+              Backend .NET Developer
             </h2>
             <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
               21-year-old Navigation Science student from Sohag, Egypt.
