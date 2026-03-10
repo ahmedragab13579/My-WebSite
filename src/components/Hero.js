@@ -58,11 +58,11 @@ export default function Hero() {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 max-w-md">
               <div className="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-lg border border-white border-opacity-20">
-                <p className="text-2xl font-bold">2+</p>
+                <p className="text-2xl font-bold">5+</p>
                 <p className="text-sm text-gray-300">Projects</p>
               </div>
               <div className="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-lg border border-white border-opacity-20">
-                <p className="text-2xl font-bold">3+</p>
+                <p className="text-2xl font-bold">37+</p>
                 <p className="text-sm text-gray-300">Certifications</p>
               </div>
               <div className="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-lg border border-white border-opacity-20">
@@ -81,12 +81,20 @@ export default function Hero() {
 
               {/* Profile Card */}
               <div className="relative z-10 bg-white bg-opacity-5 backdrop-blur-xl border border-white border-opacity-20 rounded-2xl p-8 w-full max-w-sm">
-                <div className="w-full aspect-square bg-gradient-to-br from-navy-900 to-black rounded-full mb-6 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 opacity-20 mix-blend-soft-light pointer-events-none bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.3)_1px,_transparent_0)] [background-size:4px_4px] rounded-2xl"></div>
+                <div className="w-full aspect-square bg-gradient-to-br from-navy-900 to-black rounded-full mb-6 flex items-center justify-center overflow-hidden relative">
                   <img
                     src="/Images/Avatar/4.jpg"
                     alt="Ahmed Ragab"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                    }}
                     className="w-full h-full object-cover"
                   />
+                  <span className="absolute inset-0 flex items-center justify-center text-4xl font-bold">
+                    AR
+                  </span>
                 </div>
                 <p className="text-white font-semibold text-lg">Ahmed Ragab</p>
                 <p className="text-gray-300 text-sm">Backend Developer</p>

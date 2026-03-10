@@ -15,7 +15,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "Montserrat", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        display: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
         luxury: "0 10px 30px rgba(0, 0, 0, 0.1)",

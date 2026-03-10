@@ -8,8 +8,6 @@ export default function Contact() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -20,15 +18,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, you would send this to a backend service
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
+    const subject = encodeURIComponent("Portfolio Contact");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:ahmed.ragab@example.com?subject=${subject}&body=${body}`;
   };
 
   const contactInfo = [
@@ -117,22 +111,12 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-white bg-opacity-5 backdrop-blur-md border border-white border-opacity-20 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold mb-2">Send a Message</h3>
+            <p className="text-xs text-gray-300 mb-6">
+              This form will open your email client with a pre-filled message.
+            </p>
 
-            {submitted ? (
-              <div className="flex items-center justify-center py-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">✓</span>
-                  </div>
-                  <h4 className="text-xl font-bold mb-2">Message Sent!</h4>
-                  <p className="text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon.
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Name */}
                 <div>
                   <label
@@ -204,11 +188,16 @@ export default function Contact() {
 
                 {/* Note */}
                 <p className="text-xs text-gray-400 text-center">
-                  This is a frontend form. For production, integrate with a
-                  backend service like Formspree, EmailJS, or your own API.
+                  Prefer a direct email? Reach me at{" "}
+                  <a
+                    href="mailto:ahmed.ragab@example.com"
+                    className="underline hover:text-white"
+                  >
+                    ahmed.ragab@example.com
+                  </a>
+                  .
                 </p>
               </form>
-            )}
           </div>
         </div>
       </div>
