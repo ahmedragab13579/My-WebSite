@@ -33,59 +33,33 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-luxury-light">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="section-title">Technical Skills</h2>
-
-        <div className="grid md:grid-cols-2 gap-8 animate-slide-up max-w-4xl mx-auto">
-          {skillCategories.map((category, idx) => (
-            <section
+    <section id="skills" className="py-20 px-4 bg-luxury-light">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="section-title text-center">Technical Skills</h2>
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-up">
+          {skillCategories.map((category) => (
+            <div
               key={category.name}
-              className={`${category.bgColor} rounded-lg p-6 text-white shadow-luxury transition-all duration-300`}
+              className={`${category.bgColor} rounded-xl p-6 text-white shadow-luxury`}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-white bg-opacity-20 p-3 rounded-lg">
-                  <category.Icon className="text-white" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">{category.name}</h3>
+                <category.Icon
+                  className="p-2 bg-white/10 rounded-lg"
+                  size={40}
+                />
+                <h3 className="text-xl font-bold">{category.name}</h3>
               </div>
-
-              <ul className="space-y-4">
-                {category.skills.map((skillName, i) => (
-                  <li key={skillName} className="">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="font-medium text-sm">{skillName}</span>
-                      <span className="text-xs font-bold text-gray-300">—</span>
-                    </div>
-                    <div className="w-full bg-white bg-opacity-20 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="bg-white h-full rounded-full"
-                        style={{ width: `${60 + (i % 5) * 6}%` }}
-                      />
-                    </div>
-                  </li>
+              {/* تبسيط القائمة لتقليل العناصر */}
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-white/10 rounded-full text-xs font-medium"
+                  >
+                    {skill}
+                  </span>
                 ))}
-              </ul>
-            </section>
-          ))}
-        </div>
-
-        {/* Additional Info */}
-        <div className="grid md:grid-cols-4 gap-6 mt-16 animate-fade-in">
-          {[
-            { label: "Languages Known", value: "2" },
-            { label: "Years of Experience", value: "2+" },
-            { label: "Projects Delivered", value: "5+" },
-            { label: "Certifications", value: "37+" },
-          ].map((stat, idx) => (
-            <div
-              key={idx}
-              className="card-luxury p-6 text-center hover:shadow-luxury transition-all duration-300"
-            >
-              <p className="text-3xl font-bold text-navy-900 mb-2">
-                {stat.value}
-              </p>
-              <p className="text-gray-600 font-medium">{stat.label}</p>
+              </div>
             </div>
           ))}
         </div>

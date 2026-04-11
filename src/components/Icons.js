@@ -6,6 +6,9 @@ import {
   Database,
   Github,
   ExternalLink,
+  MessageSquare,
+  Users,
+  CheckCircle,
 } from "lucide-react";
 
 export const ServerIcon = (props) => <Server {...props} />;
@@ -14,12 +17,21 @@ export const CodeIcon = (props) => <Code {...props} />;
 export const DatabaseIcon = (props) => <Database {...props} />;
 export const GithubIcon = (props) => <Github {...props} />;
 export const ExternalLinkIcon = (props) => <ExternalLink {...props} />;
+export const MessageSquareIcon = (props) => <MessageSquare {...props} />;
+export const UsersIcon = (props) => <Users {...props} />;
+export const CheckCircleIcon = (props) => <CheckCircle {...props} />;
 
-export default {
+// إسناد الكائن لمتغير لإصلاح تحذير ESLint
+const icons = {
   ServerIcon,
   LockIcon,
   CodeIcon,
   DatabaseIcon,
   GithubIcon,
   ExternalLinkIcon,
+  MessageSquareIcon,
+  UsersIcon,
+  CheckCircleIcon,
 };
+
+export default icons;

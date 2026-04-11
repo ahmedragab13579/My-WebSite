@@ -7,18 +7,60 @@
     <meta name="theme-color" content="#001F3F" />
     <meta
       name="description"
-      content="Professional Portfolio of Ahmed Ragab - Back End.NET Developer & Cybersecurity Enthusiast"
+      content="Professional Portfolio of Ahmed Ragab - Back End .NET Developer & Cybersecurity Enthusiast"
     />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/Images/Avatar/4.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/Inter.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/Montserrat.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .animate-slide-up {
+        will-change: transform, opacity;
+      }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+    </style>
+
     <title>Ahmed Ragab | Back End .NET Developer</title>
+
     <link rel="canonical" href="https://ahmed-ragab.vercel.app/" />
+    <meta name="robots" content="index, follow" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load Google Fonts without blocking render -->
+
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap"
       as="style"
-      onload="this.rel = 'stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -26,28 +68,6 @@
         rel="stylesheet"
       />
     </noscript>
-    <!-- Preload font files if self-hosted. Replace the hrefs if you host fonts locally. -->
-    <link
-      rel="preload"
-      href="/fonts/Inter.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Montserrat.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <!-- Preload hero image used in the above-the-fold Hero component to improve LCP -->
-    <link
-      rel="preload"
-      href="/Images/Avatar/4.webp"
-      as="image"
-      type="image/webp"
-    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

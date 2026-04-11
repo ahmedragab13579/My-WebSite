@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,7 +20,7 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent("Portfolio Contact");
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
     );
     window.location.href = `mailto:ahmed.ragab@example.com?subject=${subject}&body=${body}`;
   };
@@ -117,87 +117,87 @@ export default function Contact() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Name */}
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold mb-2"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="5"
-                    className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400 resize-none"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 bg-white text-navy-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              {/* Name */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold mb-2"
                 >
-                  <Send size={18} />
-                  Send Message
-                </button>
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400"
+                  placeholder="Your name"
+                />
+              </div>
 
-                {/* Note */}
-                <p className="text-xs text-gray-400 text-center">
-                  Prefer a direct email? Reach me at{" "}
-                  <a
-                    href="mailto:ahmedharidy2019@gmail.com"
-                    className="underline hover:text-white"
-                  >
-                    ahmed.ragab@example.com
-                  </a>
-                  .
-                </p>
-              </form>
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="5"
+                  className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:bg-opacity-20 transition-all text-white placeholder-gray-400 resize-none"
+                  placeholder="Your message here..."
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full px-6 py-3 bg-white text-navy-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Send size={18} />
+                Send Message
+              </button>
+
+              {/* Note */}
+              <p className="text-xs text-gray-400 text-center">
+                Prefer a direct email? Reach me at{" "}
+                <a
+                  href="mailto:ahmedharidy2019@gmail.com"
+                  className="underline hover:text-white"
+                >
+                  ahmed.ragab@example.com
+                </a>
+                .
+              </p>
+            </form>
           </div>
         </div>
       </div>

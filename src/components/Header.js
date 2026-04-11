@@ -17,7 +17,7 @@ export default function Header() {
     <header className="fixed w-full top-0 bg-luxury-white bg-opacity-95 backdrop-blur-md border-b border-gray-200 shadow-luxury-sm z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold gradient-text">
+        <a href="/" className="text-2xl font-bold gradient-text">
           AR
         </a>
 

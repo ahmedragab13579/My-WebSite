@@ -89,9 +89,6 @@ export default function Hero() {
                     fetchPriority="high"
                     width="384"
                     height="384"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                    }}
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  Github,
-  ExternalLink,
-  Database,
-  MessageSquare,
-  Users,
-  CheckCircle,
-} from "lucide-react";
+  DatabaseIcon,
+  MessageSquareIcon,
+  UsersIcon,
+  CheckCircleIcon,
+  GithubIcon,
+  ExternalLinkIcon,
+} from "./Icons";
 
 export default function Experience() {
   const projects = [
@@ -18,19 +18,19 @@ export default function Experience() {
         "A comprehensive e-commerce solution built during ITI training, showcasing advanced backend architecture and microservices patterns.",
       highlights: [
         {
-          icon: <Database className="text-navy-900" size={20} />,
+          Icon: DatabaseIcon,
           title: "Redis Caching",
           description:
             "Implemented intelligent caching layer for optimized performance and reduced database load.",
         },
         {
-          icon: <MessageSquare className="text-navy-900" size={20} />,
+          Icon: MessageSquareIcon,
           title: "RabbitMQ Integration",
           description:
             "Built asynchronous message processing for order management and notification systems.",
         },
         {
-          icon: <CheckCircle className="text-navy-900" size={20} />,
+          Icon: CheckCircleIcon,
           title: "API Architecture",
           description:
             "Designed RESTful APIs with proper error handling, validation, and scalability patterns.",
@@ -55,19 +55,19 @@ export default function Experience() {
         "A robust HR system developed in collaboration with IEEE members, emphasizing quality testing and team collaboration.",
       highlights: [
         {
-          icon: <Users className="text-navy-900" size={20} />,
+          Icon: UsersIcon,
           title: "Team Collaboration",
           description:
             "Worked in agile teams with clear communication, code reviews, and knowledge sharing sessions.",
         },
         {
-          icon: <MessageSquare className="text-navy-900" size={20} />,
+          Icon: MessageSquareIcon,
           title: "Email Integration",
           description:
             "Implemented SMTP-based email notifications for HR events, approvals, and communications.",
         },
         {
-          icon: <CheckCircle className="text-navy-900" size={20} />,
+          Icon: CheckCircleIcon,
           title: "Unit Testing",
           description:
             "Developed comprehensive test suites ensuring code reliability and system integrity.",
@@ -96,8 +96,8 @@ export default function Experience() {
 
         <div className="grid md:grid-cols-2 gap-8 animate-slide-up">
           {projects.map((project, index) => (
-            <div
-              key={index}
+            <article
+              key={project.title}
               className="card-luxury p-8 hover:shadow-luxury-lg transition-all duration-300 flex flex-col"
             >
               {/* Header */}
@@ -128,8 +128,10 @@ export default function Experience() {
               {/* Highlights */}
               <div className="mb-8 space-y-4">
                 {project.highlights.map((highlight, idx) => (
-                  <div key={idx} className="flex gap-4">
-                    <div className="flex-shrink-0 mt-1">{highlight.icon}</div>
+                  <div key={highlight.title} className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <highlight.Icon className="text-navy-900" size={20} />
+                    </div>
                     <div>
                       <p className="font-semibold text-navy-900 mb-1">
                         {highlight.title}
@@ -168,7 +170,7 @@ export default function Experience() {
                   aria-label={`View ${project.title} source code on GitHub`}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-navy-900 text-white rounded-md font-semibold hover:bg-black transition-all duration-300"
                 >
-                  <Github size={16} />
+                  <GithubIcon size={16} />
                   View Code
                 </a>
                 <a
@@ -177,11 +179,11 @@ export default function Experience() {
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-navy-900 text-navy-900 rounded-md font-semibold hover:bg-navy-900 hover:text-white transition-all duration-300"
                 >
-                  <ExternalLink size={16} />
+                  <ExternalLinkIcon size={16} />
                   GitHub
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

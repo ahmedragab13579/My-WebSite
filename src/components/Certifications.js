@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExternalLink, X } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { certificatesData, getCategories } from "../data/certificatesData";
 
 export default function Certifications() {
