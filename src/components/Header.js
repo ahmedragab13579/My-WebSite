@@ -45,6 +45,8 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+          aria-expanded={isOpen}
           className="md:hidden text-navy-900"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}

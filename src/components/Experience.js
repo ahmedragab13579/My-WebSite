@@ -165,6 +165,7 @@ export default function Experience() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`View ${project.title} source code on GitHub`}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-navy-900 text-white rounded-md font-semibold hover:bg-black transition-all duration-300"
                 >
                   <Github size={16} />

@@ -83,9 +83,12 @@ export default function Hero() {
                 <div className="absolute inset-0 opacity-20 mix-blend-soft-light pointer-events-none bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.3)_1px,_transparent_0)] [background-size:4px_4px] rounded-2xl"></div>
                 <div className="w-full aspect-square bg-gradient-to-br from-navy-900 to-black rounded-full mb-6 flex items-center justify-center overflow-hidden relative">
                   <img
-                    src="/Images/Avatar/4.jpg"
+                    src="/Images/Avatar/4.webp"
                     alt="Ahmed Ragab"
-                    loading="lazy"
+                    loading="eager"
+                    fetchPriority="high"
+                    width="384"
+                    height="384"
                     onError={(e) => {
                       e.target.style.display = "none";
                     }}

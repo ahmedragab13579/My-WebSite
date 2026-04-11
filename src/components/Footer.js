@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="text-2xl font-bold gradient-text mb-3">Ahmed Ragab</p>
-            <p className="text-gray-400">
+            <p className="text-gray-200">
               Full Stack .NET Developer & Cybersecurity Enthusiast building
               secure, scalable digital solutions.
             </p>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={idx}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={idx}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -109,7 +109,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Copyright */}
-          <div className="text-gray-400 text-sm text-center md:text-left">
+          <div className="text-gray-200 text-sm text-center md:text-left">
             <p>
               © {currentYear} Ahmed Ragab. All rights reserved. | Built with
               React & Tailwind CSS
@@ -132,7 +132,7 @@ export default function Footer() {
 
       {/* Decorative Element */}
       <div className="mt-12 pt-8 border-t border-white border-opacity-10">
-        <p className="text-center text-gray-500 text-xs">
+        <p className="text-center text-gray-200 text-xs">
           "Excellence is not a skill, it's a habit." - Aristotle
         </p>
       </div>
